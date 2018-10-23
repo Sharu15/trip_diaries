@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+
+{% block planlist %}
+    <a href="/plan/" class="top-menu"><span class="glyphicon glyphicon-plus"><h4>Add new</h4></span></a>
+    {# <a href="/plan_list/" class="top-menu"><span class="glyphicon glyphicon-plus"><h4>Your Plan</h4></span></a #{# }> #}
+    <h2>Your Plans</h2>
+    {% for plan in plans %}
+    	{{ plan.created_date }}
+    	{{ plan.place }}
+    {% endfor %}	
+{% endblock %} 
+ 

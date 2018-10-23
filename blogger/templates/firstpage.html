@@ -1,0 +1,130 @@
+{% load static %}
+<html>
+<head>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link href='//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>	
+  <link rel="stylesheet" href="{% static 'css/firstpage.css' %}">
+</head>
+<body>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <img src="1.jpg" alt="First slide">
+                        <div class="carousel-caption">
+                            <h3>
+                                First slide</h3>
+                            <p>
+                                Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="1.jpg" alt="Second slide">
+                        <div class="carousel-caption">
+                            <h3>
+                                Second slide</h3>
+                            <p>
+                                Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="1.jpg" alt="Third slide">
+                        <div class="carousel-caption">
+                            <h3>
+                                Third slide</h3>
+                            <p>
+                                Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                        </div>
+                    </div>
+                </div>
+                <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left"></span></a><a class="right carousel-control"
+                        href="#carousel-example-generic" data-slide="next"><span class="glyphicon glyphicon-chevron-right">
+                        </span></a>
+            </div>
+            <div class="main-text hidden-xs">
+                <div class="col-md-12 text-center">
+                    <h1>
+                        Trip Diaries</h1>
+                    <h3>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    </h3>
+                    <div class="">
+                      <button type="button" style="color:white"><a href="{% url 'signin' %}">Tell us your story</a></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="push">
+</div>
+
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+</body>
+</html>
+
+{# <div id="myCarousel" class="carousel slide">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+
+        <!-- Wrapper for Slides -->
+        <div class="carousel-inner">
+            <div class="item active">
+                <!-- Set the first background image using inline CSS below. -->
+                <div class="fill" style="background-image:url('1.jpg');"></div>
+                <div class="carousel-caption">
+                     <h2 class="animated fadeInLeft">Trip Diaries</h2>
+                     <p class="animated fadeInUp"></p>
+                     <p class="animated fadeInUp"><a href="#" class="btn btn-transparent btn-rounded btn-large">Tell us your story</a></p>
+                </div>
+            </div>
+            <div class="item">
+                <!-- Set the second background image using inline CSS below. -->
+                <div class="fill" style="background-image:url('1.jpg');"></div>
+                <div class="carousel-caption">
+                     <h2 class="animated fadeInDown">Trip Diaries</h2>
+                     <p class="animated fadeInUp">Tell us your story</p>
+                     <p class="animated fadeInUp"><a href="#" class="btn btn-transparent btn-rounded btn-large">Tell us your story</a></p>
+                </div>
+            </div>
+            <div class="item">
+                <!-- Set the third background image using inline CSS below. -->
+                <div class="fill" style="background-image:url('1.jpg');"></div>
+                <div class="carousel-caption">
+                     <h2 class="animated fadeInRight">Trip Diaries</h2>
+                     <p class="animated fadeInRight">Tell us your story</p>
+                     <p class="animated fadeInRight"><a href="#" class="btn btn-transparent btn-rounded btn-large">Tell us your story</a></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Controls -->
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <span class="icon-prev"></span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+            <span class="icon-next"></span>
+        </a>
+
+    </div> #}

@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block element %}
+    <a href="/new_post/" class="top-menu" ><span class="glyphicon glyphicon-plus"><h4 style="">Add new</h4></span></a>
+    {# <a href="/drafts/" class="top-menu"><span class="glyphicon glyphicon-edit">Drafts </span></a>  #}
+
+    {% for post in posts %}
+    	{{ post.published_date }}<br>
+    	{{ post.title }}<br>
+    	{{ post.text|linebreaksbr }}
+    {% endfor %}	
+{% endblock %}    
