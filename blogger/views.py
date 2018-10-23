@@ -27,7 +27,7 @@ def signup(request):
 		else:
 			user=User.objects.create_user(username=username,email=email,password=password)	
 			user.save()
-			return redirect("/")
+			return redirect("/home/")
 	return render(request, "signup.html")
 
 def signin(request):
@@ -38,7 +38,7 @@ def signin(request):
 		print(user)
 		if user is not None:
 			login(request, user)
-			return redirect("/")
+			return redirect("/home/")
 	return render(request,"signin.html")    	
 
 def signout(request):
@@ -74,7 +74,7 @@ def plan(request):
 		schedule = request.POST.get('schedule')
 		to_do_list= request.POST.get('to_do_list')
 		Plan.objects.create(start_date=start_date,end_date=end_date,place=place,schedule=schedule,to_do_list=to_do_list)
-		return redirect("plan_list")
+		return redirect("/plan_list/")
 	return render(request, 'plan.html')
 
 def post_list(request):
@@ -91,7 +91,7 @@ def add_comment_to_post(request, pk):
 		post = get_object_or_404(Post, pk=pk)
 		text= request.POST.get('text')
 		Comment.objects.create(text=text)	
-		return redirect('post_detail', pk=post.pk)
+		return redirect('/post_detail/', pk=post.pk)
 	return render(request, 'post_details.html')  	  	
 
 # def post_remove(request, pk):

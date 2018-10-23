@@ -19,10 +19,10 @@ from blogger import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('tripdiaries/', views.tripdiaries, name='tripdiaries'),
+    path('', views.tripdiaries, name='tripdiaries'),
     path('signup/', views.signup, name='signup'),
     path('login/', views.signin, name='signin'),
-    path('', views.home, name='home'),
+    path('home/', views.home, name='home'),
     path('logout/', views.signout, name='logout'),
     path('new_post/', views.new_post, name='new_post'),
     path('post/<int:pk>/', views.post_detail, name='post_detail'),
